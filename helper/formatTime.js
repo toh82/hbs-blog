@@ -1,6 +1,6 @@
 module.exports = formatTime
 
-var moment = require('moment')
+var Moment = require('moment')
 
 /**
  * @param {string} date
@@ -8,6 +8,6 @@ var moment = require('moment')
  * @returns {string}
  */
 function formatTime (date, format) {
-    var moment = moment(date)
-    return moment.format(format)
+  var moment = Moment(date)
+  return moment.format(format)
 }

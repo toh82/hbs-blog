@@ -1,6 +1,6 @@
 {
   "name": "hbs-blog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "handlebarjs helper to generate blog pages",
   "main": "index.js",
   "scripts": {
@@ -26,11 +26,18 @@
   "homepage": "https://github.com/toh82/hbs-blog#readme",
   "dependencies": {
     "cheerio": "^0.22.0",
-    "through2": "^2.0.3",
     "front-matter": "^2.1.2",
-    "moment": "^2.18.1"
+    "fs": "0.0.1-security",
+    "glob": "^7.1.1",
+    "moment": "^2.18.1",
+    "remarkable": "^1.7.1",
+    "through2": "^2.0.3",
+    "underscore": "^1.8.3",
+    "util": "^0.10.3"
   },
   "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-plugin-standard": "^3.0.0",
     "standard": "^8.6.0"
   }
 }

@@ -1,22 +1,25 @@
 module.exports = loadDocumentData
 
-var through = require('through2')
-var extend = require('util')._extend
-var readDocumentData = require('../lib/read-document-data')
+var Through = require('through2')
+var Extend = require('util')._extend
+var ReadDocumentData = require('../lib/read-document-data')
 
+/**
+ * @returns {void}
+ */
 function loadDocumentData () {
-    return through.obj(function (file, enc, cb) {
-        var fileContent = file.contents.toString()
+  return Through.obj(function (file, enc, cb) {
+    var fileContent = file.contents.toString()
 
-        if (!file.data) {
-            file['data'] = {}
-        }
+    if (!file.data) {
+      file['data'] = {}
+    }
 
-        extend(
-            file.data,
-            readDocumentData(fileContent, null)
-        )
+    Extend(
+      file.data,
+      ReadDocumentData(fileContent, null)
+    )
 
-        cb(null, file)
-    })
+    cb(null, file)
+  })
 }

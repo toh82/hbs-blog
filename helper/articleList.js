@@ -1,9 +1,9 @@
 module.exports = articleList
 
-var glob = require('glob')
-var fs = require('fs')
-var cheerio = require('cheerio')
-var getData = require('../lib/read-document-data')
+var Glob = require('glob')
+var Fs = require('fs')
+var Cheerio = require('cheerio')
+var ReadDocumentData = require('../lib/read-document-data')
 var _ = require('underscore')
 
 /**
@@ -29,19 +29,19 @@ function renderArticleList (articles, options) {
 
 /**
  * @private
+ * @param {string} baseFolder
  * @param {string} folder
  * @returns {Array}
  */
-function getArticlesFromFolder (folder) {
-  var baseFolder = './src/'
-  var files = glob.sync(baseFolder + folder + '/*.html')
+function getArticlesFromFolder (baseFolder, folder) {
+  var files = Glob.sync(baseFolder + folder + '/*.html')
   var articles = []
 
   files.forEach(function (file) {
-    var content = fs.readFileSync(file, 'utf8')
-    var $ = cheerio.load(content)
+    var content = Fs.readFileSync(file, 'utf8')
+    var $ = Cheerio.load(content)
 
-    var documentData = getData(content, null)
+    var documentData = ReadDocumentData(content, null)
 
     articles.push({
       title: documentData.headline + ' - ' + documentData.subline,
@@ -60,12 +60,13 @@ function getArticlesFromFolder (folder) {
 
 /**
  * @public
+ * @param {string} baseFolder
  * @param {string} folder
  * @param {object} options
  * @returns {string}
  */
-function articleList (folder, options) {
-  var articles = getArticlesFromFolder(folder)
+function articleList (baseFolder, folder, options) {
+  var articles = getArticlesFromFolder(baseFolder, folder)
 
   return renderArticleList(articles, options)
 }

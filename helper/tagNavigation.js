@@ -1,9 +1,9 @@
 module.exports = tagNavigation
 
-var glob = require('glob')
-var fs = require('fs')
+var Glob = require('glob')
+var Fs = require('fs')
 var _ = require('underscore')
-var getDocumentData = require('../lib/read-document-data')
+var GetDocumentData = require('../lib/read-document-data')
 
 /**
  * @private
@@ -14,8 +14,8 @@ function getTagList (files) {
   var tagList = []
 
   files.forEach(function (file) {
-    var content = fs.readFileSync(file, 'utf8')
-    var tags = getDocumentData(content, 'tags')
+    var content = Fs.readFileSync(file, 'utf8')
+    var tags = GetDocumentData(content, 'tags')
 
     tagList = _.union(tagList, tags.split(','))
   })
@@ -45,7 +45,7 @@ function renderTagList (tagList, options) {
  * @returns {string}
  */
 function tagNavigation (folder, options) {
-  var files = glob.sync(folder + '/*.html')
+  var files = Glob.sync(folder + '/*.html')
   var tagList = getTagList(files)
 
   return renderTagList(tagList, options)

@@ -1,4 +1,3 @@
-
 var readDocumentData = require('./lib/read-document-data')
 
 var removeDocumentData = require('./gulp/remove-document-data')
@@ -10,19 +9,19 @@ var tagNavigation = require('./helper/tagNavigation')
 var formatTags = require('./helper/formatTags')
 var formatTime = require('./helper/formatTime')
 
- module.exports = {
-    document: {
-        gulp: {
-            remove: removeDocumentData,
-            load: loadDocumentData
-        },
-        read: readDocumentData
+module.exports = {
+  document: {
+    gulp: {
+      remove: removeDocumentData,
+      load: loadDocumentData
     },
-    helper: {
-        formatTime: formatTime,
-        tagNavigation: tagNavigation,
-        formatTags: formatTags,
-        articleList: articleList,
-        markdown: markdown
-    }
-};
+    read: readDocumentData
+  },
+  helper: {
+    formatTime: formatTime,
+    tagNavigation: tagNavigation,
+    formatTags: formatTags,
+    articleList: articleList,
+    markdown: markdown
+  }
+}

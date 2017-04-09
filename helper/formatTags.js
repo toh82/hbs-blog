@@ -1,5 +1,9 @@
 module.exports = formatTags
 
+/**
+ * @param {string} input
+ * @returns {string}
+ */
 function formatTags (input) {
   var tags = input.split(',')
   var htmlTagList = ''
