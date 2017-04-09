@@ -11,13 +11,13 @@ The helper reads and provides the following data:
 - author
 - date
 - tags
+- lang
 - intro (read from a html with id `intro-text`)
 - link (this is the link to the document)
-- lang (read from the html `lang` attribute)
 
 **Example**
 ```
-    {{#articleList '[folder of blog posts]'}}
+    {{#articleList '[base folder like ./src/]' '[folder of blog posts like posts/]'}}
       <div>
         {{title}}
         {{author}}
@@ -28,11 +28,24 @@ The helper reads and provides the following data:
 
 ### Tag navigation 
 
+[ToDo]
+
 ### Markdown
+
+The Markdown helper uses **Remarkable** to format markdown code to html. Yet not settings are added and be aware that, if there is a newline at the beginning of you text, the output will be messed up. Therefore, start your first line directly after the helper placeholder.
+
+**Example**
+```
+{{#markdown}}#your markdown text{{/markdown}}
+```
 
 ### Format tags
 
+[ToDo]
+
 ## Document Data Module (uses FrontMatter)
+
+[ToDo]
 
 ### Reading FrontMatter data from a document
 

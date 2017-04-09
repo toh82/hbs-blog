@@ -46,9 +46,9 @@ function getArticlesFromFolder (baseFolder, folder) {
     articles.push({
       title: documentData.headline + ' - ' + documentData.subline,
       author: documentData.author,
-      intro: $('.main > p.intro').text(),
+      intro: $('#intro-text').text(),
       link: file.replace(baseFolder, ''),
-      lang: $('html').attr('lang'),
+      lang: documentData.lang,
       date: documentData.date,
       dateCode: documentData.date,
       tags: documentData.tags
