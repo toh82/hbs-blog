@@ -20,7 +20,7 @@ The helper reads and provides the following data:
 ```
     {{#articleList '[base folder like ./src/]' '[folder of blog posts like posts/]'}}
       <div>
-        {{title}}
+        {{headline}}
         {{author}}
         ...
       </div>
