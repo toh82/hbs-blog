@@ -44,7 +44,8 @@ function getArticlesFromFolder (baseFolder, folder) {
     var documentData = ReadDocumentData(content, null)
 
     articles.push({
-      title: documentData.headline + ' - ' + documentData.subline,
+      headline: documentData.headline,
+      subline: documentData.subline,
       author: documentData.author,
       intro: $('#intro-text').text(),
       link: file.replace(baseFolder, ''),
