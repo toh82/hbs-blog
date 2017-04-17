@@ -29,7 +29,7 @@ The helper reads and provides the following data:
 
 ### Tag navigation 
 
-The tag navigation helper walks through all files given in defined folder and reads the `tags` property from *FrontMatters* to generate a list of all available tags.
+The tag navigation helper walks through all files given in defined folder and reads the `tags` property from **FrontMatter** to generate a list of all available tags.
 
 - title (title of the tag)
 
