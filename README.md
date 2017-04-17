@@ -7,7 +7,8 @@ handlebars helper and stuff to create a blog
 
 The article list helper gives you the possibility to render a list from documents, within a given folder. Documents which should be listed needs a **FrontMatter** header.  
 The helper reads and provides the following data:
-- title
+- headline
+- subline
 - author
 - date
 - tags
@@ -28,7 +29,19 @@ The helper reads and provides the following data:
 
 ### Tag navigation 
 
-[ToDo]
+The tag navigation helper walks through all files given in defined folder and reads the `tags` property from *FrontMatters* to generate a list of all available tags.
+
+- title (title of the tag)
+
+**Example**
+```
+<h3>Filter blog posts by tags:</h3>
+<ul class="tags">
+    {{#tagNavigation blog.post.folder}}
+    <li class="tags__item"><a href="#{{title}}">{{title}}</a></li>
+    {{/tagNavigation}}
+</ul>
+```
 
 ### Markdown
 
@@ -40,6 +53,10 @@ The Markdown helper uses **Remarkable** to format markdown code to html. Yet not
 ```
 
 ### Format tags
+
+[ToDo]
+
+### Format time
 
 [ToDo]
 

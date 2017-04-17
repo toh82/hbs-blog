@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.0
+- Removed `title` property from articleList helper
+- Added `headline` and `subline` property to articleList helper
+- Added documentation for tagNavigation
+
 ## 1.0.2
 - Fixed intro text selector
 - Add documentation about markdown helper
