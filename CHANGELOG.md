@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1
+- Removed the HTML code from format tags helper
+- Added description about the format tags helper
+
 ## 1.1.0
 - Removed `title` property from articleList helper
 - Added `headline` and `subline` property to articleList helper
