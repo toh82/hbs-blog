@@ -1,3 +1,5 @@
+[![GitHub issues](https://img.shields.io/github/issues/toh82/hbs-blog.svg?style=flat-square)](https://github.com/toh82/hbs-blog/issues)
+
 # hbs-blog
 handlebars helper and stuff to create a blog
 
@@ -54,7 +56,18 @@ The Markdown helper uses **Remarkable** to format markdown code to html. Yet not
 
 ### Format tags
 
-[ToDo]
+The **Format Tags** helper takes a comma separated list of tags and render them with the given html code.
+
+- tag (tagname)
+
+**Example**
+```
+<ul class="tags">
+    {{#formatTags tags}}
+    <li class="tags__item">{{tag}}</li>
+    {{/formatTags}}
+</ul>
+```
 
 ### Format time
 
