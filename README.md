@@ -69,9 +69,16 @@ The **Format Tags** helper takes a comma separated list of tags and render them 
 </ul>
 ```
 
-### Format time
+### Format time (uses moment.js)
 
-[ToDo]
+The **Format time** helper transform a date into a user-friendly format. It uses the [moment.js library](https://momentjs.com/docs/).
+
+The `date` and `format` parameters are documented respectively [here](https://momentjs.com/docs/#/parsing/string/) and [here](https://momentjs.com/docs/#/parsing/string-format/).
+
+**Example**
+```
+{{#formatTime date format}}
+```
 
 ## Document Data Module (uses FrontMatter)
 
