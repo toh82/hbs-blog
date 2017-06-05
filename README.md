@@ -81,7 +81,9 @@ The `date` and `format` parameters are documented respectively [here](https://mo
 ```
 
 **Example 2**
+```
 <time datetime="{{formatTime date "YYYY-MM-DD"}}">{{formatTime date "DD.MM.YYYY"}}</time>
+```
 
 ## Document Data Module (uses FrontMatter)
 
