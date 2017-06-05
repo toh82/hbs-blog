@@ -75,10 +75,13 @@ The **Format time** helper transform a date into a user-friendly format. It uses
 
 The `date` and `format` parameters are documented respectively [here](https://momentjs.com/docs/#/parsing/string/) and [here](https://momentjs.com/docs/#/parsing/string-format/).
 
-**Example**
+**Example 1**
 ```
-{{#formatTime date format}}
+{{formatTime date format}}
 ```
+
+**Example 2**
+<time datetime="{{formatTime date "YYYY-MM-DD"}}">{{formatTime date "DD.MM.YYYY"}}</time>
 
 ## Document Data Module (uses FrontMatter)
 
