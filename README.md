@@ -1,6 +1,4 @@
 [![GitHub issues](https://img.shields.io/github/issues/toh82/hbs-blog.svg?style=flat-square)](https://github.com/toh82/hbs-blog/issues)
-[![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/hbs-blog)
-[![npm](https://img.shields.io/npm/dt/express.svg?style=flat-square)](https://www.npmjs.com/package/hbs-blog)
 [![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg?style=flat-square)](https://codeclimate.com/github/toh82/hbs-blog)
 
 # hbs-blog
