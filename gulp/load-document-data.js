@@ -12,7 +12,9 @@ function loadDocumentData () {
     var fileContent = file.contents.toString()
 
     if (!file.data) {
-      file['data'] = {}
+      file['data'] = {
+        relativePath: file.relative
+      }
     }
 
     Extend(

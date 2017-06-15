@@ -1,7 +1,17 @@
 [![GitHub issues](https://img.shields.io/github/issues/toh82/hbs-blog.svg?style=flat-square)](https://github.com/toh82/hbs-blog/issues)
+[![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/hbs-blog)
+[![npm](https://img.shields.io/npm/dt/express.svg?style=flat-square)](https://www.npmjs.com/package/hbs-blog)
+[![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg?style=flat-square)](https://codeclimate.com/github/toh82/hbs-blog)
 
 # hbs-blog
-handlebars helper and stuff to create a blog
+Handlebarsjs helper to create a static blog
+
+## Install
+
+The best way to install this module is by npm:  
+`npm install hbs-blog`  
+
+[hbs-blog on npm](https://www.npmjs.com/package/hbs-blog)
 
 ## Handlebarsjs helper
 
@@ -29,7 +39,7 @@ The helper reads and provides the following data:
     {{/articleList}}
 ```
 
-### Tag navigation 
+### Tag navigation
 
 The tag navigation helper walks through all files given in defined folder and reads the `tags` property from **FrontMatter** to generate a list of all available tags.
 
@@ -87,7 +97,10 @@ The `date` and `format` parameters are documented respectively [here](https://mo
 
 ## Document Data Module (uses FrontMatter)
 
-[ToDo]
+The document data module extends the `data` object with useful information which you can directly use as **handlebarsjs variables**. The main purpose is to push the [**FrontMatter**](https://www.npmjs.com/package/front-matter) properties into the `data` object but it also has system properties.  
+
+**System properties:**
+- relativePath (provides the path to the file)
 
 ### Reading FrontMatter data from a document
 

@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.0
+- FEATURE: added `relativePath` property to the data object
+
 ## 1.1.1
 - Removed the HTML code from format tags helper
 - Added description about the format tags helper
