@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1
+- Removed wrong badges from readme
+- Migrated from `extend` to `Object.assign()`
+
 ## 1.2.0
 - FEATURE: added `relativePath` property to the data object
 

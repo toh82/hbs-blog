@@ -4,7 +4,7 @@ var Through = require('through2')
 var Fm = require('front-matter')
 
 /**
- * @returns {void}
+ * @returns {object}
  */
 function removeDocumentData () {
   return Through.obj(function (file, enc, cb) {

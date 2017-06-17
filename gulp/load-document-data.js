@@ -1,24 +1,22 @@
 module.exports = loadDocumentData
 
 var Through = require('through2')
-var Extend = require('util')._extend
 var ReadDocumentData = require('../lib/read-document-data')
 
 /**
- * @returns {void}
+ * @returns {object}
  */
 function loadDocumentData () {
   return Through.obj(function (file, enc, cb) {
     var fileContent = file.contents.toString()
 
     if (!file.data) {
-      file['data'] = {
-        relativePath: file.relative
-      }
+      file['data'] = {}
     }
 
-    Extend(
-      file.data,
+    Object.assign(
+      file['data'],
+      {relativePath: file.relative},
       ReadDocumentData(fileContent, null)
     )
 
