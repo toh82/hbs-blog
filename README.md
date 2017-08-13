@@ -21,20 +21,39 @@ The helper reads and provides the following data:
 - subline
 - author
 - date
+- dateCode
 - tags
 - lang
 - intro (read from a html with id `intro-text`)
 - link (this is the link to the document)
+- sticky (is used for position of the article within the article list)
+
+If the helper has parameter for **respect sticky** set to true it will put the articles, which have set the property `sticky: true` within Front-Matter data, to the beginning of the list. 
 
 **Example**
 ```
-    {{#articleList '[base folder like ./src/]' '[folder of blog posts like posts/]'}}
+    {{#articleList '[base folder like ./src/]' '[folder of blog posts like posts/]' [respect sticky:true|false]}}
       <div>
         {{headline}}
         {{author}}
         ...
       </div>
     {{/articleList}}
+```
+
+### Sticky list (see Article list)
+
+The sticky list is a wrapper for the article list, which gives back only sticky articles (articles which have `sticky: true` property within **Front-Matter** header).
+
+**Example**
+```
+    {{#stickyList '[base folder like ./src/]' '[folder of blog posts like posts/]'}}
+      <div>
+        {{headline}}
+        {{author}}
+        ...
+      </div>
+    {{/stickyList}}
 ```
 
 ### Tag navigation
