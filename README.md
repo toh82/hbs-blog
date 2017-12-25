@@ -17,6 +17,7 @@ The best way to install this module is by npm:
 
 The article list helper gives you the possibility to render a list from documents, within a given folder. Documents which should be listed needs a **FrontMatter** header.  
 The helper reads and provides the following data:
+- index
 - headline
 - subline
 - author
@@ -27,6 +28,7 @@ The helper reads and provides the following data:
 - intro (read from a html with id `intro-text`)
 - link (this is the link to the document)
 - sticky (is used for position of the article within the article list)
+- previewImage
 
 If the helper has parameter for **respect sticky** set to true it will put the articles, which have set the property `sticky: true` within Front-Matter data, to the beginning of the list. 
 

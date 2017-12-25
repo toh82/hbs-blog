@@ -14,7 +14,12 @@ function renderArticleList (articles, options) {
   }
 
   var articlesHtml = ''
-  articles.forEach(function (article) {
+  articles.forEach(function (article, index) {
+    Object.assign(
+      article,
+      article,
+      {index: index}
+    )
     articlesHtml = articlesHtml + options.fn(article)
   })
 

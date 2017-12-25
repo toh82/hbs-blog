@@ -1,6 +1,6 @@
 {
   "name": "hbs-blog",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "handlebarjs helper to generate blog pages and navigations",
   "main": "index.js",
   "scripts": {

@@ -16,7 +16,12 @@ function renderArticleList (articles, respectSticky, options) {
 
   var stickyHtml = ''
   var articlesHtml = ''
-  articles.forEach(function (article) {
+  articles.forEach(function (article, index) {
+    Object.assign(
+      article,
+      article,
+      {index: index}
+    )
     if (respectSticky && article.sticky) {
       stickyHtml = options.fn(article)
       return
